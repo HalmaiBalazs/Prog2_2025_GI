@@ -33,5 +33,7 @@ class Drink:
         return f"Drink({self.name}, {self.size}, {self.price} Ft)"
 
     def __eq__(self, other):
-        return self.size == other.size and self.price == other.price and self.name == other.name
+        return self._size == other._size and self.__price == other.__price and self.name == other.name
 
+    def __lt__(self, other):
+        return self._size > other._size or self.__price < other.__price and self.name > other.name
