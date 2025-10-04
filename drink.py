@@ -38,3 +38,27 @@ class Drink:
     def __lt__(self, other):
         return self._size > other._size or self.__price < other.__price and self.name > other.name
 
+    @staticmethod
+    def task_8(drinks: list["Drink"]):
+        uniqueList = []
+        for drink in drinks:
+            if drink.size not in uniqueList:
+                uniqueList.append(drink.size)
+        return uniqueList
+
+    @staticmethod
+    def task_9(drinks: list["Drink"]):
+        uniqueList = []
+        for drink in drinks:
+            if drink.size not in uniqueList:
+                uniqueList.append(drink.size)
+        return uniqueList
+
+    @staticmethod
+    def task_10(drinks: list["Drink"]):
+        dictionary = {}
+        for drink in drinks:
+            if dictionary.keys().__contains__(drink.size):
+                dictionary[drink.size] += 1
+            else:
+                dictionary[drink.size] = 1
