@@ -1,6 +1,8 @@
 from logging import exception
 
 from person import Person
+from student import Student
+
 
 def main():
     print("Hello World")
@@ -13,6 +15,10 @@ def main():
         people.append(pe)
 
     print(people)
+
+    s1 = Student("s1","Odin",1,False,"ABC123")
+    print(s1)
+
     #if len(Person.example_names) != 0:
     #    example_name = Person.example_names.pop(0)
 
