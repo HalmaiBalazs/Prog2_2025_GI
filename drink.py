@@ -37,3 +37,4 @@ class Drink:
 
     def __lt__(self, other):
         return self._size > other._size or self.__price < other.__price and self.name > other.name
+
